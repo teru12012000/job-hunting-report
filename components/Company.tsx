@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import company from "./styles/Company.css";
+import Link from "next/link"
 type ques={
   question:string;
   ans:string;
@@ -28,6 +29,9 @@ const Company: NextPage = () => {
             <li className={company.li}>{item.question}：{item.ans}</li>
           </ul>
         ))}
+        <Link href="https://www.sdtech.co.jp/">
+          <a target="_blank">会社ホームページ(外部リンク)</a>
+        </Link>
       </div>
     </div>
   );
