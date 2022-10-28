@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 
 const home={
   intro:style({
-    margin:"10px auto",
+    margin:"20px auto",
     width:"100%",
     textAlign:"center",
   }),
@@ -18,17 +18,23 @@ const home={
     fontWeight:"bold",
     color:"yellow",
     '@media':{
-      'screen and (max-width:400px)':{
+      'screen and (max-width:414px)':{
         fontSize:"15px",
-        padding:"15px",
+        padding:"10px",
+      },
+      'screen and (max-width:300px)':{
+        fontSize:"10px",
       }
     },
     ':hover':{
      backgroundColor:"aqua",
-     transition:"1s"
+     color:"red",
+     transition:"0.6s"
     }
   }),
-
+  ul:style({
+    padding:"0"
+  }),
   li:style({
     listStyle:"none",
     margin:"50px"

@@ -22,6 +22,28 @@ const Home: NextPage = () => {
       target:"",
     }
   ]
+  const menu:intro[]=[
+    {
+      link:"/intern",
+      name:"インターンシップ",
+      target:""
+    },
+    {
+      link:"/selection",
+      name:"選考へ！",
+      target:""
+    },
+    {
+      link:"/interview",
+      name:"面接",
+      target:""
+    },
+    {
+      link:"/othres",
+      name:"その他",
+      target:""
+    },
+  ]
   return (
     <>
       <Head>
@@ -33,7 +55,19 @@ const Home: NextPage = () => {
       <div className={home.intro}>
         <h2 className={home.h2}>私について</h2>
         {myintro.map((item,index)=>(
-          <ul key={index}>
+          <ul key={index} className={home.ul}>
+            <li className={home.li}>
+              <Link href={item.link} key={index}>
+                <a className={home.link} target={item.target}>{item.name}</a>
+              </Link>
+            </li>
+          </ul>
+        ))}
+      </div>
+      <div className={home.intro}>
+        <h2 className={home.h2}>タスク</h2>
+        {menu.map((item,index)=>(
+          <ul key={index} className={home.ul}>
             <li className={home.li}>
               <Link href={item.link} key={index}>
                 <a className={home.link} target={item.target}>{item.name}</a>
