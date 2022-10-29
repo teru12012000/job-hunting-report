@@ -5,6 +5,7 @@ const int_sty={
     textAlign:"center",
     width:"700px",
     margin:"auto",
+   
     '@media':{
       'screen and (max-width:700px)':{
         width:"90%",
@@ -14,6 +15,7 @@ const int_sty={
   box:style({
     width:"400px",
     margin:"30px auto",
+    border:"3px solid gray",
     '@media':{
       'screen and (max-width:700px)':{
         width:"90%",
@@ -30,6 +32,7 @@ const int_sty={
     textAlign:"left",
     margin:"30px",
     border:"2px solid gray",
+    fontWeight:"bold"
   }),
   li1:style({
     listStyle:"none",

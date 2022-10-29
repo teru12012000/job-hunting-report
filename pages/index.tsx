@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       target:""
     },
     {
-      link:"/othres",
+      link:"/others",
       name:"その他",
       target:""
     },
