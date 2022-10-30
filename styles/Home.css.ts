@@ -41,7 +41,7 @@ const home={
   }),
   p:style({
     backgroundColor:"yellow",
-    color:"red",
+    color:"blue",
   })
 }
 
