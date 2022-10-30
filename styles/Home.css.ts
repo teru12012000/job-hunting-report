@@ -38,6 +38,10 @@ const home={
   li:style({
     listStyle:"none",
     margin:"50px"
+  }),
+  p:style({
+    backgroundColor:"yellow",
+    color:"red",
   })
 }
 

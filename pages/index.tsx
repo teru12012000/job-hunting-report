@@ -53,6 +53,7 @@ const Home: NextPage = () => {
       </Head>
       <Header/>
       <div className={home.intro}>
+        <p className={home.p}>※あくまでも私の体験レポートなので他の人とは違った部分も多々あるので参考程度に！</p>
         <h2 className={home.h2}>私について</h2>
         {myintro.map((item,index)=>(
           <ul key={index} className={home.ul}>
