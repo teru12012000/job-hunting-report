@@ -4,6 +4,32 @@ import Header from "../components/Header";
 import Back from "../components/Back";
 import Others from "../styles/others.css";
 import Link from "next/link";
+export type id={
+  id:string;
+  title:string;
+}
+const myid:id[]=[
+  {
+    id:"/others/#start",
+    title:"就活を始めた時期",
+  },
+  {
+    id:"/others/#agent",
+    title:"就活エージェント",
+
+  },
+  {
+    id:"/others/#other",
+    title:"その他でやっていたこと",
+  },
+  {
+    id:"/others/#last",
+    title:"最後に",
+  },
+]
+
+
+
 const others:NextPage= () => {
   return (
     <div>
@@ -11,13 +37,10 @@ const others:NextPage= () => {
         <title>その他</title>
       </Head>
       <Header/>
-      <Back/>
+      <Back id={myid}/>
       <div className={Others.content}>
-        <p>
-          ここではその他のことをまとめています。
-        </p>
         <div className={Others.box}>
-          <h2>就活を始めた時期</h2>
+          <h2 id="start">就活を始めた時期</h2>
           <p>
             本格的に始めたのは大学3年の11月です。
             一般解禁は翌年3月ですが部活動と両立したいこともあり早めに始めました。
@@ -27,7 +50,7 @@ const others:NextPage= () => {
           </p>
         </div>
         <div className={Others.box}>
-          <h2>就活エージェント</h2>
+          <h2 id="agent">就活エージェント</h2>
           <p>
             私は1人で就活は厳しいと思ってました。
             そこで就活エージェントを利用しました。
@@ -38,7 +61,7 @@ const others:NextPage= () => {
           </p>
         </div>
         <div className={Others.box}>
-          <h2>その他でやっていたこと</h2>
+          <h2 id="other">その他でやっていたこと</h2>
           <p>
            私はIT企業開発職を希望していたため何かものづくりをしようと考えました。
            webサイトやアプリを作成してそれをESに添付してもらってました。
@@ -56,7 +79,7 @@ const others:NextPage= () => {
         </p>
         </div>
         <div className={Others.box}>
-          <h2>最後に</h2>
+          <h2 id="last">最後に</h2>
           <p>
             私は就職活動を通して5社の内定をいただきました。
             就活を始めるにあたり、とりあえずどっか応募するというのはよろしくないです。

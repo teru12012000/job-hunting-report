@@ -11,6 +11,48 @@ type ullist={
   menu:string;
   detail:string;
 }
+export type id={
+  id:string;
+  title:string;
+}
+const myid:id[]=[
+  {
+    id:"/interview/#shaft",
+    title:"就活の軸",
+  },
+  {
+    id:"/interview/#reason",
+    title:"志望理由",
+
+  },
+  {
+    id:"/interview/#why",
+    title:"なぜそう業界を選んだのか",
+  },
+  {
+    id:"/interview/#study",
+    title:"学生時代学んだこと・研究について",
+  },
+  {
+    id:"/interview/#activity",
+    title:"ガクチカ",
+  },
+  {
+    id:"/interview/#pr",
+    title:"自己PR",
+  },
+  {
+    id:"/interview/#longshort",
+    title:"長所・短所",
+  },
+  {
+    id:"/interview/#question",
+    title:"逆質問",
+  },
+
+]
+
+
 const interview : NextPage= () => {
   const list:ollist[]=[
     {
@@ -37,7 +79,8 @@ const interview : NextPage= () => {
     {
       menu:"短所",
       detail:"周りが見えなくなってしまう。"
-    }
+    },
+    
 
   ]
   const question:ollist[]=[
@@ -69,7 +112,7 @@ const interview : NextPage= () => {
         <title>面接</title>
       </Head>
       <Header/>
-      <Back/>
+      <Back id={myid}/>
       <div className={int_sty.content}>
         <p>
           就活のメインイベントといえば面接ですよね。
@@ -78,7 +121,7 @@ const interview : NextPage= () => {
           自分なりにまとめてみました。
         </p>
         <div className={int_sty.box}>
-          <h2>就活の軸</h2>
+          <h2 id="shaft">就活の軸</h2>
           <p>
             就活の軸は一番重要です。
             しかし定めるには難しいかもしれません。
@@ -96,7 +139,7 @@ const interview : NextPage= () => {
           </p>
         </div>
         <div className={int_sty.box}>
-          <h2>志望理由</h2>
+          <h2 id="reason">志望理由</h2>
           <p>
             志望理由は就活の軸が定まっていれば簡単です。
             以下の例文は私が入社予定の企業の志望理由です。
@@ -116,7 +159,7 @@ const interview : NextPage= () => {
           </p>
         </div>
         <div className={int_sty.box}>
-          <h2>なぜその業界を選んだのか？</h2>
+          <h2 id="why">なぜその業界を選んだのか？</h2>
           <p>
             これもよく聞かれます。明確な理由がないと
             厳しいかもしれません。私がIT企業を選んだ理由は以下の通りです。
@@ -135,7 +178,7 @@ const interview : NextPage= () => {
           </p>
         </div>
         <div className={int_sty.box}>
-          <h2>学生時代に学んだこと・研究について</h2>
+          <h2 id="study">学生時代に学んだこと・研究について</h2>
           <p>
             学部学科で学んだことを簡単に言っていけばいいと思います。
             1年次ではこのようなことをし2年次では・・・という感じです。
@@ -147,7 +190,7 @@ const interview : NextPage= () => {
           </p>
         </div>
         <div className={int_sty.box}>
-          <h2>ガクチカ(学業以外で何を頑張ったのか)</h2>
+          <h2 id="activity">ガクチカ(学業以外で何を頑張ったのか)</h2>
           <p>
             ガクチカはアルバイト、サークル、部活、ボランティアなど
             勉強以外で何を頑張ったかをアピールする場です。いう手順としては次の通りです。
@@ -172,7 +215,7 @@ const interview : NextPage= () => {
           </p>
         </div>
         <div className={int_sty.box}>
-          <h2>自己PR</h2>
+          <h2 id="pr">自己PR</h2>
           <p>
             自己PRは自分の長所を具体例を用いてアピールしましょう。
             ガクチカと内容がダブって大丈夫です。
@@ -187,7 +230,7 @@ const interview : NextPage= () => {
           </div>
         </div>
         <div className={int_sty.box}>
-          <h2>長所・短所</h2>
+          <h2 id="longshort">長所・短所</h2>
           <p>
             長所短所は「長所なんだけど短所でもある」ものをいうといいと思います。
           </p>
@@ -208,7 +251,7 @@ const interview : NextPage= () => {
           </p>
         </div>
         <div className={int_sty.box}>
-          <h2>逆質問</h2>
+          <h2 id="question">逆質問</h2>
           <p>
             必ず最後には逆質問があります。
             質問がないというのは論外です。

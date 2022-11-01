@@ -8,8 +8,25 @@ type list={
   menu:string;
   detail:string;
 } 
+export type id={
+  id:string;
+  title:string;
+}
+const myid:id[]=[
+  {
+    id:"/selection/#explanation",
+    title:"企業説明会",
+  },
+  {
+    id:"/selection/#test",
+    title:"webテスト",
 
-
+  },
+  {
+    id:"/selection/#discuss",
+    title:"グループディスカッション",
+  },
+]
 const selection: NextPage= () => {
   const important_list:list[]=[
     {
@@ -50,11 +67,10 @@ const selection: NextPage= () => {
         <title>選考について</title>
       </Head>
       <Header/>
-      <Back/>
+      <Back id={myid}/>
       <div className={select.content}>
-        <p>ここでは企業説明会、webテスト、グループディスカッションについて話します。</p>
         <div className={select.block}>
-          <h2>企業説明会</h2>
+          <h2 id="explanation">企業説明会</h2>
           <p>
             選考を受けるうえで企業説明会に出席することは必須です。
             個人的には一番楽しい時間でした。企業によって事業内容や
@@ -80,7 +96,7 @@ const selection: NextPage= () => {
         </p>
         </div>
         <div className={select.block}>
-          <h2>Webテスト</h2>
+          <h2 id="test">Webテスト</h2>
           <p>
             選考に進んでよく遭遇するのがwebテストです。
             私は頭が固いので得意ではなかったですが運良く
@@ -92,7 +108,7 @@ const selection: NextPage= () => {
           </p>
         </div>
         <div className={select.block}>
-          <h2>グループディスカッション</h2>
+          <h2 id="discuss">グループディスカッション</h2>
           <p>
             説明会後や選考フローにグループディスカッションがあるところがちらほらとありました。
             私はあまり遭遇しませんでしたがコンサルタントを目指している人は良くグルディスをやっていた

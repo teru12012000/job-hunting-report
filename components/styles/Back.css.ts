@@ -2,9 +2,7 @@ import {style} from "@vanilla-extract/css"
 
 const back={
   content:style({
-    width:"20%",
-    textAlign:"center",
-    marginTop:"10px",
+    width:"100%",
   }),
   p:style({
     margin:"0",
@@ -16,7 +14,36 @@ const back={
       color:"aqua",
       transition:"0.6s",
     }
-  })
+  }),
+  h2:style({
+    textAlign:"center",
+  }),
+  ul:style({
+    margin:"auto",
+    padding:"0",
+    textAlign:"center",
+    width:"400px",
+    border:"2px solid gray",
+    '@media':{
+      'screen and (max-width:400px)':{
+        width:"80%",
+      }
+    }
+  }),
+  li:style({
+    listStyle:"none",
+    margin:"10px",
+    color:"blue",
+    backgroundColor:"yellow",
+    ':hover':{
+      color:"white",
+      backgroundColor:"aqua",
+      transition:"0.6s"
+    }
+  }),
+  icon:style({
+    marginLeft:"10px",
+  }),
 }
 
 export default back

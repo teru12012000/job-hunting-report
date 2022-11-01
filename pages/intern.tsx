@@ -9,42 +9,66 @@ type work={
   working:string;
   thoughts:string;
 }
+export type id={
+  id:string;
+  title:string;
+}
+const myid:id[]=[
+  {
+    id:"/intern/#about",
+    title:"私のインターンについて",
+  },
+  {
+    id:"/intern/#company",
+    title:"インターンで行った企業",
+
+  },
+  {
+    id:"/intern/#goal",
+    title:"インターンの目的",
+  },
+  {
+    id:"/intern/#long",
+    title:"長期インターンについて",
+  },
+]
 const intern :NextPage= () => {
   const mywork:work[]=[
     {
       title:"1社目",
       detail:"ハードウェアに付属するソフトウェアを作っているらしい？",
       working:"webでインターンだった。インターンの内容は2dayでC言語で数あてゲームを実装するという内容だった。インターン自体は楽しかった。",
-      thoughts:"東京で仕事したいなと感じた。目で見えるものを作りたいと思った。"
+      thoughts:"東京で仕事したいなと感じた。目で見えるものを作りたいと思った。",
     },
     {
       title:"2社目",
       detail:"IT企業で主に上流工程をやっている会社だった。",
       working:"グループワークでクライアントのお客様の要望を聞いてシステムを提案するという体験をした。",
-      thoughts:"プログラミングを駆使して開発をするということはしなかったことからこれも自分がやりたいことではないと思った。"
+      thoughts:"プログラミングを駆使して開発をするということはしなかったことからこれも自分がやりたいことではないと思った。",
     },
     {
       title:"3社目",
       detail:"web開発を強みとする会社。",
       working:"HTMLを駆使してAIチャットを作るということをやった。",
-      thoughts:"プログラミングを駆使して開発できる会社がいいと思った。"
+      thoughts:"プログラミングを駆使して開発できる会社がいいと思った。",
     },
     {
       title:"4社目",
       detail:"全ての工程や下流工程のみをやるシステム開発会社。",
       working:"HTMLとJavascriptで仕様書通りのサイトを作ってみるということをやった。",
-      thoughts:"3社目と同じ感想"
+      thoughts:"3社目と同じ感想",
     },
   ]
+  
   return (
     <div>
       <Head>
         <title>インターンシップ</title>
       </Head>
       <Header/>
-      <Back/>
+      <Back id={myid}/>
       <div className={internship.content}>
-        <h2>私のインターンについて</h2>
+        <h2 id="about">私のインターンについて</h2>
         <div className={internship.textbox}>
         <p>
           私はインターンは4社行きました。実際
@@ -55,7 +79,7 @@ const intern :NextPage= () => {
         </p>
         </div>
         <div className={internship.textbox}>
-          <h2>インターンで行った企業(企業名は書きません)</h2>
+          <h2 id="company">インターンで行った企業(企業名は書きません)</h2>
           {mywork.map((item,index)=>(
             <div className={internship.box} key={index}>
               <h3 className={internship.h3}>{item.title}</h3>
@@ -83,7 +107,7 @@ const intern :NextPage= () => {
           ))}
         </div>
         <div className={internship.textbox}>
-          <h2>インターンの目的</h2>
+          <h2 id="goal">インターンの目的</h2>
           <p>
             私のインターンの目的は主に業界研究でした。
             ITでもプログラミングを書かない企業も
@@ -97,7 +121,7 @@ const intern :NextPage= () => {
           </p>
         </div>
         <div className={internship.textbox}>
-          <h2>長期インターンについて</h2>
+          <h2 id="long">長期インターンについて</h2>
           <p>
             時間があるのであれば長期インターンに行くといいと思います。
             私は行ってませんが機械学習系統の長期インターンに行ってた
