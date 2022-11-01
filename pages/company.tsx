@@ -11,7 +11,22 @@ type ques={
 type reason={
   reason:string;
 }
+export type id={
+  id:string;
+  title:string;
+}
+const myid:id[]=[
+  {
+    id:"/company/#overview",
+    title:"概要",
+  },
+  {
+    id:"/company/#reason",
+    title:"なぜその会社に？",
 
+  },
+  
+]
 const Company : NextPage= () => {
   const comp_ques:ques[]=[
     {
@@ -42,9 +57,9 @@ const Company : NextPage= () => {
         <title>入社予定の会社</title>
       </Head>
       <Header/>
-      <Back/>
+      <Back id={myid}/>
       <div className={company.content}>
-        <h2>概要</h2>
+        <h2 id="overview">概要</h2>
         <div className={company.box}>
           <div className={company.ulbox}>
             {comp_ques.map((item,index)=>(
@@ -59,7 +74,7 @@ const Company : NextPage= () => {
             </Link>
           </div>
         </div>
-        <h2>なぜその会社に？</h2>
+        <h2 id="reason">なぜその会社に？</h2>
         <div className={company.box}>
           <p className={company.p}>理由は主に2つ。</p>
           <ol>
