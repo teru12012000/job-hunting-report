@@ -20,7 +20,7 @@ const Back= (props:Props) => {
         {props.id.map((item,index)=>(
           <li key={index} className={back.li}>
             <Link href={item.id}>
-              <a>{item.title}</a>
+              <a className={back.a1}>{item.title}</a>
             </Link>
           </li>
         ))}

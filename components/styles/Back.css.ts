@@ -33,6 +33,11 @@ const back={
   li:style({
     listStyle:"none",
     margin:"10px",
+  }),
+  icon:style({
+    marginLeft:"10px",
+  }),
+  a1:style({
     color:"blue",
     backgroundColor:"yellow",
     ':hover':{
@@ -40,10 +45,7 @@ const back={
       backgroundColor:"aqua",
       transition:"0.6s"
     }
-  }),
-  icon:style({
-    marginLeft:"10px",
-  }),
+  })
 }
 
 export default back
