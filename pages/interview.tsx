@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Back from "../components/Back";
 import int_sty from "../styles/interview.css";
+import React,{ useState } from "react";
 
 type ollist={
   menu:string;
@@ -53,7 +54,11 @@ const myid:id[]=[
 ]
 
 
-const interview : NextPage= () => {
+const Interview : NextPage= () => {
+  
+  const [dis1,setDis1]= useState('none');
+  const [dis2,setDis2]= useState('none');
+  const [dis3,setDis3]= useState('none');
   const list:ollist[]=[
     {
       menu:"結論(「私のがんばったことはアルバイトです。」など)"
@@ -106,6 +111,31 @@ const interview : NextPage= () => {
       menu:"ご縁があった場合自分に期待したいこと",
     }
   ]
+  
+  const handleh3=(dis:string,num:number)=>{
+    if(dis==="none"){
+      if(num===1){
+        setDis1("block")
+      }
+      else if(num===2){
+        setDis2("block")
+      }else{
+        setDis3("block")
+      }
+    }else{
+      if(num===1){
+        setDis1("none")
+      }
+      else if(num===2){
+        setDis2("none")
+      }else{
+        setDis3("none")
+      }
+    }
+  }
+
+
+
   return (
     <div>
       <Head>
@@ -144,7 +174,13 @@ const interview : NextPage= () => {
             志望理由は就活の軸が定まっていれば簡単です。
             以下の例文は私が入社予定の企業の志望理由です。
           </p>
-          <div className={int_sty.point}>
+          <h3 className={int_sty.h3} onClick={()=>handleh3(dis2,2)}>例文</h3>
+          <div 
+            className={int_sty.point}
+            style={{
+              display:dis2,
+            }}
+          >
           1つは御社がユーザにとって使いやすいものである利用時品質を大事にしている会社だということです.
           もう1つは組み込み系でデザイナーと一緒に開発を行うということです. 
           人が使いやすいと思えるようなシステムを考えて開発するということは良いエンジニアになる上でとても大事になることだと思いました.
@@ -153,6 +189,7 @@ const interview : NextPage= () => {
           私はデザイナーの発想の力を借り学べる環境であり,人を中心に考える御社の開発に携わり人が使いやすいといえるシステムを
           構築し,エンジニアのスペシャリストに成長したいと考え御社を志願します.
           </div>
+          <p>※例文をクリック!</p>
           <p>
            実際の面接では要点をまとめて短くいっていますが、軸をもとになぜその軸にあっているのか？
            その企業のどこに魅力を感じたのか？自分はそこで何がしたいのか？をきちんと言えていると思います。
@@ -168,7 +205,7 @@ const interview : NextPage= () => {
             父が会社の社内システムを構築している人で、
             影響を受け私は父を超えるエンジニアになりたいと思った。
           </div>
-          <p>
+          <p >
             あくまでも具体例です。人それぞれ理由はあると思うので
             言語化できるようにしておきましょう。これに似た質問で
             なぜ今在学している大学を選んだのかも聞かれます。
@@ -201,7 +238,13 @@ const interview : NextPage= () => {
           ))}
           </ol>
           <p>では私のガクチカの例を見てみましょう。</p>
-          <div className={int_sty.point}>
+          <h3 className={int_sty.h3} onClick={()=>handleh3(dis1,1)}>例文</h3>
+          <div 
+            className={int_sty.point}
+            style={{
+              display:dis1,
+            }}
+          >
             学生時代に頑張った事は部活動です。
             私は陸上競技部に所属しています。
             私は箱根駅伝予選会に出場することを目標に掲げてきました。
@@ -209,6 +252,7 @@ const interview : NextPage= () => {
             そこで時間を効率よく使うことを意識することで練習の量が増え3年生で箱根駅伝予選会に出場することができました。
             このことから24時間のなかでの時間の使い方の大切さを学びました。
           </div>
+          <p>※例文をクリック!</p>
           <p>
             重要なのはそこでぶつかった壁に対してどう解決し何を学んだかが大事になります。
             がんばった内容も大事ですが特にそこを重視して考えていきましょう。
@@ -220,7 +264,13 @@ const interview : NextPage= () => {
             自己PRは自分の長所を具体例を用いてアピールしましょう。
             ガクチカと内容がダブって大丈夫です。
           </p>
-          <div className={int_sty.point}>
+          <h3 className={int_sty.h3} onClick={()=>handleh3(dis3,3)}>例文</h3>
+          <div 
+            className={int_sty.point}
+            style={{
+              display:dis3,
+            }}
+          >
             私の長所は、徹底して努力することです。
             1度目標を立てると、絶対に意志を曲げずに必ず目標を達成するためにひたむきに努力します。
             特に陸上競技ではこの長所が発揮されたと思っています。
@@ -228,6 +278,7 @@ const interview : NextPage= () => {
             しかし、1回1回の練習の振り返りをして次の練習に活かす工夫をしたり授業がない時間帯や何もすることがなく空いている時間を利用して練習したりし、目標達成に向けて努力し続けてきました。
             その結果、箱根駅伝予選会に出場することができました。
           </div>
+          <p>※例文をクリック!</p>
         </div>
         <div className={int_sty.box}>
           <h2 id="longshort">長所・短所</h2>
@@ -289,4 +340,4 @@ const interview : NextPage= () => {
   );
 }
 
-export default interview;
+export default Interview;

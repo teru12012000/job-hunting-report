@@ -26,7 +26,8 @@ const int_sty={
     border:"2px solid gray",
     fontSize:"20px",
     margin:"20px",
-    fontWeight:"bold"
+    marginTop:"0",
+    fontWeight:"bold",
   }),
   ol:style({
     textAlign:"left",
@@ -42,6 +43,19 @@ const int_sty={
     listStyle:"none",
     fontWeight:"normal"
   }),
+  h3:style({
+    border:"2px solid gray",
+    margin:"20px",
+    marginBottom:"0",
+    background:"yellow",
+    color:"blue",
+    cursor:"pointer",
+    ':hover':{
+      background:"aqua",
+      color:"white",
+      transition:"0.6s",
+    }
+  })
 
 }
 
