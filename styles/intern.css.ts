@@ -6,7 +6,8 @@ const internship={
   }),
   textbox:style({
     width:"400px",
-    margin:"50px auto",
+    margin:"30px auto",
+    borderBottom:"2px solid gray",
     '@media':{
       'screen and (max-width:400px)':{
         width:"90%",

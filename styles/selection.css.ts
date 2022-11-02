@@ -7,7 +7,8 @@ const select={
   }),
   block:style({
     width:"400px",
-    margin:"20px auto",
+    margin:"30px auto",
+    borderBottom:"2px solid gray",
     '@media':{
       'screen and (max-width:400px)':{
         width:"90%",

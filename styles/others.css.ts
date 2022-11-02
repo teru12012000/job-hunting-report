@@ -14,7 +14,7 @@ const Others={
   box:style({
     width:"400px",
     margin:"30px auto",
-    border:"3px solid gray",
+    borderBottom:"2px solid gray",
     '@media':{
       'screen and (max-width:700px)':{
         width:"90%",

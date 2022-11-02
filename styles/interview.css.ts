@@ -14,8 +14,8 @@ const int_sty={
   }),
   box:style({
     width:"400px",
-    margin:"30px auto",
-    border:"3px solid gray",
+    margin:"40px auto",
+    borderBottom:"2px solid gray",
     '@media':{
       'screen and (max-width:700px)':{
         width:"90%",
