@@ -7,7 +7,7 @@ const company={
   box:style({
     border:"2px solid gray",
     width:"400px",
-    margin:"auto",
+    margin:"30px auto",
     fontSize:"20px",
     '@media':{
       'screen and (max-width:400px)':{
