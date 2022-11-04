@@ -45,7 +45,7 @@ const Home: NextPage = () => {
     },
   ]
   return (
-    <html lang='ja'>
+    <>
       <Head>
         <title>TERUSIの就活レポート</title>
         <meta name="description" content="私が体験した就活のレポートです。" />
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
           </ul>
         ))}
       </div>
-    </html>
+    </>
   )
 }
 
