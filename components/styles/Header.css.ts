@@ -25,7 +25,6 @@ const head={
     marginRight:"10px",
   }),
   icon:style({
-    fontSize:"40px",
     ":hover":{
       color:"aqua",
       transition:"0.6s",

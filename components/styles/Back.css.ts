@@ -10,6 +10,7 @@ const back={
   a:style({
     color:"blue",
     fontWeight:"bold",
+    width:"50px",
     ':hover':{
       color:"aqua",
       transition:"0.6s",
@@ -45,7 +46,11 @@ const back={
       backgroundColor:"aqua",
       transition:"0.6s"
     }
-  })
+  }),
+  link:style({
+    width:"50px",
+    height:"50px",
+  }),
 }
 
 export default back

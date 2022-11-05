@@ -9,12 +9,14 @@ type Props={
 const Back= (props:Props) => {
   return (
     <div className={back.content}>
-      <Link href="/">
-        <a className={back.a}>
-          <HomeRoundedIcon className={back.icon}/>
-          <p className={back.p}>Home</p>
-        </a>
-      </Link>
+      <div className={back.link}>
+        <Link href="/">
+          <a className={back.a}>
+            <HomeRoundedIcon className={back.icon}/>
+            <p className={back.p}>Home</p>
+          </a>
+        </Link>
+      </div>
       <h2 className={back.h2}>menu</h2>
       <ul  className={back.ul}>
         {props.id.map((item,index)=>(
