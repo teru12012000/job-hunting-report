@@ -55,6 +55,7 @@ const Company : NextPage= () => {
     <div>
       <Head>
         <title>入社予定の会社</title>
+        <meta name="description" content="私が入社予定の企業についてです。" />
       </Head>
       <Header/>
       <Back id={myid}/>

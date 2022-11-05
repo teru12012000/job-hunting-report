@@ -9,6 +9,7 @@ const company={
     width:"400px",
     margin:"30px auto",
     fontSize:"20px",
+    textAlign:"center",
     '@media':{
       'screen and (max-width:400px)':{
         fontSize:"10px",
