@@ -62,7 +62,7 @@ const selection: NextPage= () => {
     },
   ]
   return (
-    <html lang="ja">
+    <>
       <Head>
         <title>選考について</title>
       </Head>
@@ -133,7 +133,7 @@ const selection: NextPage= () => {
         </p>
         </div>
       </div>
-    </html>
+    </>
     
   );
 }
