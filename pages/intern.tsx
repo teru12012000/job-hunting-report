@@ -64,6 +64,7 @@ const intern :NextPage= () => {
     <div>
       <Head>
         <title>インターンシップ</title>
+        <meta name="description" content="インターンシップについてです。" />
       </Head>
       <Header/>
       <Back id={myid}/>

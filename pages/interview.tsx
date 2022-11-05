@@ -140,6 +140,7 @@ const Interview : NextPage= () => {
     <div>
       <Head>
         <title>面接</title>
+        <meta name="description" content="面接についてです。" />
       </Head>
       <Header/>
       <Back id={myid}/>

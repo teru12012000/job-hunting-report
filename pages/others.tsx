@@ -35,6 +35,7 @@ const others:NextPage= () => {
     <div>
       <Head>
         <title>その他</title>
+        <meta name="description" content="就活におけるその他のことを記載してます。" />
       </Head>
       <Header/>
       <Back id={myid}/>

@@ -65,6 +65,7 @@ const selection: NextPage= () => {
     <>
       <Head>
         <title>選考について</title>
+        <meta name="description" content="面接以外の選考について記載しています。" />
       </Head>
       <Header/>
       <Back id={myid}/>
