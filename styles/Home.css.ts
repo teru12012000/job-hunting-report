@@ -12,7 +12,7 @@ const home={
   link:style({
     backgroundColor:"blue",
     fontSize:"20px",
-    padding:"20px",
+    padding:"15px",
     margin:"5px",
     borderRadius:"50%",
     fontWeight:"bold",
@@ -22,8 +22,9 @@ const home={
         fontSize:"15px",
         padding:"10px",
       },
-      'screen and (max-width:300px)':{
+      'screen and (max-width:361px)':{
         fontSize:"10px",
+        padding:"5px",
       }
     },
     ':hover':{
@@ -42,7 +43,28 @@ const home={
   p:style({
     backgroundColor:"yellow",
     color:"blue",
-  })
+  }),
+  linkbox:style({
+    width:"400px",
+    margin:"auto",
+    border:"2px solid gray",
+    borderRadius:"10%",
+    '@media':{
+      'screen and (max-width:400px)':{
+        width:"90%",
+      }
+    }
+  }),
+  pass:style({
+    margin:"0",
+    fontSize:"20px"
+  }),
+  icon:style({
+    ':hover':{
+      color:"aqua",
+      transition:"0.4s"
+    },
+  }),
 }
 
 export default home

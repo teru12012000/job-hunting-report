@@ -29,7 +29,8 @@ const head={
       color:"aqua",
       transition:"0.6s",
     }
-  })
+  }),
+ 
 }
 
 export default head
