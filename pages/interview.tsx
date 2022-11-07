@@ -56,9 +56,11 @@ const myid:id[]=[
 
 const Interview : NextPage= () => {
   
-  const [dis1,setDis1]= useState('none');
-  const [dis2,setDis2]= useState('none');
-  const [dis3,setDis3]= useState('none');
+  const [dis,setDis]= useState([
+                                  'none',
+                                  'none',
+                                  'none',
+                              ]);
   const list:ollist[]=[
     {
       menu:"結論(「私のがんばったことはアルバイトです。」など)"
@@ -112,25 +114,19 @@ const Interview : NextPage= () => {
     }
   ]
   
-  const handleh3=(dis:string,num:number)=>{
-    if(dis==="none"){
-      if(num===1){
-        setDis1("block")
-      }
-      else if(num===2){
-        setDis2("block")
-      }else{
-        setDis3("block")
-      }
+  const handleh3=(disp:string,num:number)=>{
+    if(disp==='none'){
+      setDis(
+        dis.map((item,index)=>(
+          index===num? 'block':item
+        ))
+      )
     }else{
-      if(num===1){
-        setDis1("none")
-      }
-      else if(num===2){
-        setDis2("none")
-      }else{
-        setDis3("none")
-      }
+      setDis(
+        dis.map((item,index)=>(
+          index===num? 'none':item
+        ))
+      )
     }
   }
 
@@ -175,11 +171,11 @@ const Interview : NextPage= () => {
             志望理由は就活の軸が定まっていれば簡単です。
             以下の例文は私が入社予定の企業の志望理由です。
           </p>
-          <h3 className={int_sty.h3} onClick={()=>handleh3(dis2,2)}>例文</h3>
+          <h3 className={int_sty.h3} onClick={()=>handleh3(dis[0],0)}>例文</h3>
           <div 
             className={int_sty.point}
             style={{
-              display:dis2,
+              display:dis[0],
             }}
           >
           1つは御社がユーザにとって使いやすいものである利用時品質を大事にしている会社だということです.
@@ -239,11 +235,11 @@ const Interview : NextPage= () => {
           ))}
           </ol>
           <p>では私のガクチカの例を見てみましょう。</p>
-          <h3 className={int_sty.h3} onClick={()=>handleh3(dis1,1)}>例文</h3>
+          <h3 className={int_sty.h3} onClick={()=>handleh3(dis[1],1)}>例文</h3>
           <div 
             className={int_sty.point}
             style={{
-              display:dis1,
+              display:dis[1],
             }}
           >
             学生時代に頑張った事は部活動です。
@@ -265,11 +261,11 @@ const Interview : NextPage= () => {
             自己PRは自分の長所を具体例を用いてアピールしましょう。
             ガクチカと内容がダブって大丈夫です。
           </p>
-          <h3 className={int_sty.h3} onClick={()=>handleh3(dis3,3)}>例文</h3>
+          <h3 className={int_sty.h3} onClick={()=>handleh3(dis[2],2)}>例文</h3>
           <div 
             className={int_sty.point}
             style={{
-              display:dis3,
+              display:dis[2],
             }}
           >
             私の長所は、徹底して努力することです。
