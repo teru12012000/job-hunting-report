@@ -1,11 +1,13 @@
 import int_sty from "../styles/interview.css";
 import {useState} from "react";
 import {text} from "../pages/interview";
+import {FC} from "react";
 type Props={
   text:text;
 }
-const Exsample = (props:Props) => {
+const Exsample: FC<Props> = ({text}) => {
   const [dis,setDis]= useState([
+    'none',
     'none',
     'none',
     'none',
@@ -28,14 +30,14 @@ const Exsample = (props:Props) => {
   }
   return (
     <>
-        <h3 className={int_sty.h3} onClick={()=>handleh3(dis[props.text.index],props.text.index)}>例文</h3>
+        <h3 className={int_sty.h3} onClick={()=>handleh3(dis[text.index],text.index)}>例文</h3>
           <div 
             className={int_sty.point}
             style={{
-              display:dis[props.text.index],
+              display:dis[text.index],
             }}
           >
-          {props.text.text}
+          {text.text}
           </div>
           <p>※例文をクリック!</p>
     </>

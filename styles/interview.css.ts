@@ -54,7 +54,10 @@ const int_sty={
       background:"aqua",
       color:"white",
       transition:"0.6s",
-    }
+    },
+  }),
+  textpoint:style({
+    color:"blue",
   })
 
 }
