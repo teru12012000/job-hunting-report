@@ -5,46 +5,9 @@ import Header from '../components/Header'
 import home from '../styles/Home.css'
 import Link from 'next/link';
 import TwitterIcon from '@mui/icons-material/Twitter';
-type intro={
-  link:string;
-  name:string;
-  target:string;
-}
+import { menu, myintro } from '../data/home'
+
 const Home: NextPage = () => {
-  const myintro:intro[]=[
-    {
-      link:"https://portfolio-lime-ten-31.vercel.app/",
-      name:"自己紹介サイト(外部リンク)",
-      target:"_blank"
-    },
-    {
-      link:"/company",
-      name:"入社予定の会社",
-      target:"",
-    }
-  ]
-  const menu:intro[]=[
-    {
-      link:"/intern",
-      name:"インターンシップ",
-      target:""
-    },
-    {
-      link:"/selection",
-      name:"選考へ！",
-      target:""
-    },
-    {
-      link:"/interview",
-      name:"面接",
-      target:""
-    },
-    {
-      link:"/others",
-      name:"その他",
-      target:""
-    },
-  ]
   return (
     <>
       <Head>

@@ -4,32 +4,7 @@ import Header from "../components/Header";
 import Back from "../components/Back";
 import Others from "../styles/others.css";
 import Link from "next/link";
-export type id={
-  id:string;
-  title:string;
-}
-const myid:id[]=[
-  {
-    id:"/others/#start",
-    title:"就活を始めた時期",
-  },
-  {
-    id:"/others/#agent",
-    title:"就活エージェント",
-
-  },
-  {
-    id:"/others/#other",
-    title:"その他でやっていたこと",
-  },
-  {
-    id:"/others/#last",
-    title:"最後に",
-  },
-]
-
-
-
+import { othresid } from "../data/id";
 const others:NextPage= () => {
   return (
     <div>
@@ -38,7 +13,7 @@ const others:NextPage= () => {
         <meta name="description" content="就活におけるその他のことを記載してます。" />
       </Head>
       <Header/>
-      <Back id={myid}/>
+      <Back id={othresid}/>
       <div className={Others.content}>
         <div className={Others.box}>
           <h2 id="start">就活を始めた時期</h2>

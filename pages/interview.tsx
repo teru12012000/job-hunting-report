@@ -6,161 +6,10 @@ import int_sty from "../styles/interview.css";
 import React,{ useState } from "react";
 import Example from "../components/Exsample";
 import Olist from "../components/Olist";
-//オブジェクトの定義
-export type ollist={
-  menu:string;
-}
-type ullist={
-  menu:string;
-  detail:string;
-}
-export type id={
-  id:string;
-  title:string;
-}
-export type text={
-  text:string;
-  index:number;
-}
-
-//各データ
-const myid:id[]=[
-  {
-    id:"/interview/#intro",
-    title:"自己紹介",
-  },
-  {
-    id:"/interview/#shaft",
-    title:"就活の軸",
-  },
-  {
-    id:"/interview/#reason",
-    title:"志望理由",
-
-  },
-  {
-    id:"/interview/#why",
-    title:"なぜそう業界を選んだのか",
-  },
-  {
-    id:"/interview/#why_univerce",
-    title:"なぜその大学に入学したのか"
-  },
-  {
-    id:"/interview/#study",
-    title:"学生時代学んだこと・研究について",
-  },
-  {
-    id:"/interview/#activity",
-    title:"ガクチカ",
-  },
-  {
-    id:"/interview/#pr",
-    title:"自己PR",
-  },
-  {
-    id:"/interview/#longshort",
-    title:"長所・短所",
-  },
-  {
-    id:"/interview/#question",
-    title:"逆質問",
-  },
-
-]
-
-const interview_list:text[]=[
-  {
-    text:"○○大学、○○学部、○○学科に所属しています、○○です。20xx年に○○高等学校を卒業後、○○大学に入学しました。現在はそこで○○について学んでいます(研究しています)。部活は(サークルは)○○をしています。本日はよろしくお願い致します。",
-    index:0,
-  },
-  {
-    text:"1つは御社がユーザにとって使いやすいものである利用時品質を大事にしている会社だということです.もう1つは組み込み系でデザイナーと一緒に開発を行うということです. 人が使いやすいと思えるようなシステムを考えて開発するということは良いエンジニアになる上でとても大事になることだと思いました.さらに,web制作会社でいくつかデザイナーと一緒に開発するという会社は見てきましたが,組み込み系でデザイナーと一緒に開発をするという会社は見てきませんでした.実際に,デザイナーと一緒に開発をすると違った発想をしているため学ぶことが多いということを成果物作成を通じて感じました. 私はデザイナーの発想の力を借り学べる環境であり,人を中心に考える御社の開発に携わり人が使いやすいといえるシステムを構築し,エンジニアのスペシャリストに成長したいと考え御社を志願します.",
-    index:1,
-  },
-  {
-    text:"学生時代に頑張った事は部活動です。私は陸上競技部に所属しています。私は箱根駅伝予選会に出場することを目標に掲げてきました。しかし、勉強とのの両立に悩まされ1,2年生では出場することができませんでした。そこで時間を効率よく使うことを意識することで練習の量が増え3年生で箱根駅伝予選会に出場することができました。このことから24時間のなかでの時間の使い方の大切さを学びました。",
-    index:2,
-  },
-  {
-    text:"私の長所は、徹底して努力することです。1度目標を立てると、絶対に意志を曲げずに必ず目標を達成するためにひたむきに努力します。特に陸上競技ではこの長所が発揮されたと思っています。私は箱根駅伝予選会の出場を目標に立ててきましたが、なかなか思うように走れなかったり大学での勉強との両立が困難になってしまったりと悩まされてきました。しかし、1回1回の練習の振り返りをして次の練習に活かす工夫をしたり授業がない時間帯や何もすることがなく空いている時間を利用して練習したりし、目標達成に向けて努力し続けてきました。その結果、箱根駅伝予選会に出場することができました。",
-    index:3,
-  },
-  {
-    text:"xx歳の時○○という分野についての研究に興味を持ちそこで○○についての研究をしたいと思って入学しました。",
-    index:4,
-  },
-]
-const list:ollist[]=[
-  {
-    menu:"結論(「私のがんばったことはアルバイトです。」など)"
-  },
-  {
-    menu:"そこでの目標"
-  },
-  {
-    menu:"目標に対してぶつかった壁や困難"
-  },
-  {
-    menu:"それをどう解決したのか"
-  },
-  {
-    menu:"そこで学んだこと"
-  }
-]
-const long_short:ullist[]=[
-  {
-    menu:"長所",
-    detail:"1度目標を立てるとひたむきに意志を曲げずに努力する"
-  },
-  {
-    menu:"短所",
-    detail:"周りが見えなくなってしまう。"
-  },
-  
-
-]
-const question:ollist[]=[
-  {
-    menu:"他の企業に負けない部分",
-  },
-  {
-    menu:"今後の会社の課題",
-  },
-  {
-    menu:"どのような人たちが集まっているのか",
-  },
-  {
-    menu:"活躍している人の特徴",
-  },
-  {
-    menu:"○○職で働くために必要な能力",
-  },
-  {
-    menu:"学生から社会人になってから辛かった経験(役員や社長に対しての面接におすすめ)",
-  },
-  {
-    menu:"ご縁があった場合自分に期待したいこと",
-  }
-]
-const introduction:ollist[]=[
-  {
-    menu:"所属と自分の名前"
-  },
-  {
-    menu:"経歴(軽く)"
-  },
-  {
-    menu:"そこで何を学んでいるか(研究でも可)"
-  },
-  {
-    menu:"サークルや部活(これは別に言わなくてもいいと思う)"
-  },
-]
-
-
-
-
+import { list,introduction,question} from "../data/numlist";
+import { long_short } from "../data/ullist";
+import { interviewid } from "../data/id";
+import { interview_list } from "../data/text";
 const Interview : NextPage= () => {
   return (
     <div>
@@ -169,7 +18,7 @@ const Interview : NextPage= () => {
         <meta name="description" content="面接についてです。" />
       </Head>
       <Header/>
-      <Back id={myid}/>
+      <Back id={interviewid}/>
       <div className={int_sty.content}>
         <p>
           就活のメインイベントといえば面接ですよね。

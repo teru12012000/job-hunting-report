@@ -1,7 +1,6 @@
 import int_sty from "../styles/interview.css";
-import {useState} from "react";
-import {text} from "../pages/interview";
-import {FC} from "react";
+import {useState,FC} from "react";
+import {text} from "../data/text";
 type Props={
   text:text;
 }

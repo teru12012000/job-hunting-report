@@ -1,7 +1,7 @@
 ;import Link from "next/link";
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import back from "./styles/Back.css";
-import type { id } from "../pages/intern";
+import type {id} from "../data/id";
 type Props={
   id:id[];
 }

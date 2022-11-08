@@ -4,52 +4,10 @@ import Link from "next/link"
 import Back from "../components/Back"
 import Head from "next/head"
 import Header from "../components/Header"
-type ques={
-  question:string;
-  ans:string;
-}
-type reason={
-  reason:string;
-}
-export type id={
-  id:string;
-  title:string;
-}
-const myid:id[]=[
-  {
-    id:"/company/#overview",
-    title:"概要",
-  },
-  {
-    id:"/company/#reason",
-    title:"なぜその会社に？",
+import { companyid } from "../data/id";
+import { comp_ques, my_reason } from "../data/companyOverview";
 
-  },
-  
-]
 const Company : NextPage= () => {
-  const comp_ques:ques[]=[
-    {
-      question:"会社名",
-      ans:"エスディーテック株式会社"
-    },
-    {
-      question:"所属",
-      ans:"デザインエンジニアリング部"
-    },
-    {
-      question:"勤務地",
-      ans:"東京都港区もしくは自宅"
-    }
-  ]
-  const my_reason:reason[]=[
-    {
-      reason:"常に人間を中心としたものつくりを心掛けているところに魅力を感じたため"
-    },
-    {
-      reason:"デザイナーと一緒に開発ができる事に魅力を感じたため"
-    }
-  ]
   return (
     
     <div>
@@ -58,7 +16,7 @@ const Company : NextPage= () => {
         <meta name="description" content="私が入社予定の企業についてです。" />
       </Head>
       <Header/>
-      <Back id={myid}/>
+      <Back id={companyid}/>
       <div className={company.content}>
         <h2 id="overview">概要</h2>
         <div className={company.box}>

@@ -1,4 +1,4 @@
-import { ollist } from "../pages/interview";
+import { ollist } from "../data/numlist";
 import {FC} from "react";
 import int_sty from "../styles/interview.css";
 type Props={
