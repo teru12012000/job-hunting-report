@@ -6,7 +6,6 @@ import Head from "next/head"
 import Header from "../components/Header"
 import { companyid } from "../data/id";
 import { comp_ques, my_reason } from "../data/companyOverview";
-
 const Company : NextPage= () => {
   return (
     

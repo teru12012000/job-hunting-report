@@ -2,34 +2,29 @@ import { style } from '@vanilla-extract/css';
 
 const head={
   content:style({
+    textAlign:"center",
     backgroundColor:"black",
     color:"white",
-    padding:"3px",
-    fontSize:"15px",
-    width:"100%",
-    height:"90px",
-    display:"flex",
-    justifyContent:"space-between",
+    padding:"5px",
     '@media':{
-      'screen and (max-width:400px)':{
-        fontSize:"8px"
+      'screen and (min-width:540px)':{
+        display:"flex",
+        justifyContent:"space-between",
       }
     }
   }),
-  h1:style({
+  link:style({
+    display:"inline-block",
+    textAlign:"center",
     marginTop:"20px",
-    fontSize:"30px",
+    marginLeft:"10px",
   }),
-  a:style({
-    marginTop:"20px",
-    marginRight:"10px",
-  }),
-  icon:style({
-    ":hover":{
+  link2:style({
+    ':hover':{
       color:"aqua",
       transition:"0.6s",
     }
-  }),
+  })
  
 }
 
