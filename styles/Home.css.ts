@@ -10,13 +10,8 @@ const home={
     margin:"30px"
   }),
   link:style({
-    backgroundColor:"blue",
     fontSize:"20px",
-    padding:"15px",
-    margin:"5px",
-    borderRadius:"50%",
     fontWeight:"bold",
-    color:"yellow",
     '@media':{
       'screen and (max-width:414px)':{
         fontSize:"15px",
