@@ -10,17 +10,18 @@ const Header: NextPage= () => {
       <div>
       {SNSlink.map((item,index)=>(
         <div key={index} className={head.link}>
-          <Link href={item.link}>
-            <a className={head.link2}>
+          <Link 
+            href={item.link}
+            className={head.link2}
+          >
+            <div>
               <TwitterIcon/><br/>
               {item.name}
-            </a>
+            </div>
           </Link>
         </div>
       ))}
       </div>
-      
-      
     </header>
   );
 }

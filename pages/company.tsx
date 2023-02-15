@@ -27,8 +27,8 @@ const Company : NextPage= () => {
             ))}
           </div>
           <div className={company.linkbox}>
-            <Link href="https://www.sdtech.co.jp/">
-              <a  className={company.link} target="_blank">会社ホームページ(外部リンク)</a>
+            <Link href="https://www.sdtech.co.jp/" target="_blank">
+              会社ホームページ(外部リンク)
             </Link>
           </div>
         </div>

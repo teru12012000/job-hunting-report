@@ -65,8 +65,8 @@ const Interview : NextPage= () => {
           </p>
           <Example text={interview_list[1]}/>
           <p>
-           実際の面接では要点をまとめて短くいっていますが、<span className={int_sty.textpoint}>軸をもとになぜその軸にあっているのか？
-           その企業のどこに魅力を感じたのか？自分はそこで何がしたいのか？</span>をきちんと言えていると思います。
+            実際の面接では要点をまとめて短くいっていますが、<span className={int_sty.textpoint}>軸をもとになぜその軸にあっているのか？
+            その企業のどこに魅力を感じたのか？自分はそこで何がしたいのか？</span>をきちんと言えていると思います。
           </p>
         </div>
         <div className={int_sty.box}>

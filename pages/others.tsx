@@ -39,14 +39,18 @@ const others:NextPage= () => {
         <div className={Others.box}>
           <h2 id="other">その他でやっていたこと</h2>
           <p>
-           私はIT企業開発職を希望していたため何かものづくりをしようと考えました。
-           webサイトやアプリを作成してそれをESに添付してもらってました。
-           大学であまり授業をしなかったのでほとんど独学です。
-           面接で作ったサイトを見せ、それについての質問も飛んできました。
-           自分が働きたい分野の勉強、資格取得等をやっておくと少し有利かもしれません。
+            私はIT企業開発職を希望していたため何かものづくりをしようと考えました。
+            webサイトやアプリを作成してそれをESに添付してもらってました。
+            大学であまり授業をしなかったのでほとんど独学です。
+            面接で作ったサイトを見せ、それについての質問も飛んできました。
+            自分が働きたい分野の勉強、資格取得等をやっておくと少し有利かもしれません。
           </p>
-          <Link href="https://teru12012000.github.io/project/dirs/src/numeron.html">
-            <a target="_blank" className={Others.link}>NUMERON(外部リンク)</a>
+          <Link 
+            href="https://teru12012000.github.io/project/dirs/src/numeron.html"
+            target="_blank" 
+            className={Others.link}
+          >
+            NUMERON(外部リンク)
           </Link>
           <p>
           上記リンクは実際に私が作ったものです。

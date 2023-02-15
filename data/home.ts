@@ -1,4 +1,4 @@
-type intro={
+export type intro={
   link:string;
   name:string;
   target:string;
