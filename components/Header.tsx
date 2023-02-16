@@ -12,10 +12,13 @@ const Header: NextPage= () => {
         <div key={index} className={head.link}>
           <Link 
             href={item.link}
-            className={head.link2}
+            style={{
+              color:"white",
+              textDecoration:"none"
+            }}
           >
             <div>
-              <TwitterIcon/><br/>
+              <TwitterIcon sx={{color:"white"}}/><br/>
               {item.name}
             </div>
           </Link>

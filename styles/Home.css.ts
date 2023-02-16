@@ -55,10 +55,7 @@ const home={
     fontSize:"20px"
   }),
   icon:style({
-    ':hover':{
-      color:"aqua",
-      transition:"0.4s"
-    },
+    
   }),
 }
 

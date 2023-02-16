@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             display={item.display}
             icon={item.icon}
             display2={item.display2}
-      />
+          />
         </div>
       ))}      
       

@@ -5,8 +5,26 @@ import Back from "../components/Back"
 import Head from "next/head"
 import Header from "../components/Header"
 import { companyid } from "../data/id";
-import { comp_ques, my_reason } from "../data/companyOverview";
+import { comp_ques, my_reason, ques } from "../data/companyOverview";
+import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
+import CompanyTable from "../components/CompanyTable";
+type tabledeta={
+  list:ques[];
+  title:string;
+  link:boolean;
+}
 const Company : NextPage= () => {
+  const tablelist:tabledeta[]=[
+    {
+      list:comp_ques,
+      title:"概要",
+      link:true,
+    },{
+      list:my_reason,
+      title:"なぜその会社？",
+      link:false,
+    }
+  ]
   return (
     
     <div>
@@ -16,33 +34,18 @@ const Company : NextPage= () => {
       </Head>
       <Header/>
       <Back id={companyid}/>
-      <div className={company.content}>
-        <h2 id="overview">概要</h2>
-        <div className={company.box}>
-          <div className={company.ulbox}>
-            {comp_ques.map((item,index)=>(
-              <ul key={index} className={company.ul}>
-                <li className={company.li}>{item.question}：{item.ans}</li>
-              </ul>
-            ))}
+      <div className="container text-center">
+        {tablelist.map((item:tabledeta,index:number)=>(
+          <div key={index} className="mt-5">
+            <CompanyTable
+              list={item.list}
+              title={item.title}
+              link={item.link}
+            />
           </div>
-          <div className={company.linkbox}>
-            <Link href="https://www.sdtech.co.jp/" target="_blank">
-              会社ホームページ(外部リンク)
-            </Link>
-          </div>
-        </div>
-        <h2 id="reason">なぜその会社に？</h2>
-        <div className={company.box}>
-          <p className={company.p}>理由は主に2つ。</p>
-          <ol>
-              {my_reason.map((item,index)=>(
-                <li key={index} className={company.li2}>
-                  {item.reason}
-                </li>
-              ))}
-          </ol>
-        </div>
+        ))}
+      
+
       </div>
     </div>
   );
