@@ -13,8 +13,8 @@ type Props={
 }
 const Linklist:FC<Props> = ({linkmenu,title,display,icon,display2}) => {
   return (
-    <div className={home.intro}>
-        {display?(<p className={home.p}>※あくまでも私の体験レポートなので他の人とは違った部分も多々あるので参考程度に！</p>):null}
+    <div className="container text-center mt-5">
+        {display?(<p>※あくまでも私の体験レポートなので他の人とは違った部分も多々あるので参考程度に！</p>):null}
         <h2 className={home.h2}>{title}</h2>
         <div className={home.linkbox}>
         <ul className={home.ul}>

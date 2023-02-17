@@ -2,15 +2,16 @@
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import back from "./styles/Back.css";
 import type {id} from "../data/id";
-import { IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
+import container from "../styles/Container.css";
 type Props={
   id:id[];
 }
 
 const Back= (props:Props) => {
   return (
-    <div className={back.content}>
-      <div className={back.link}>
+    <>
+      <div className="m-3">
         <Link 
           href="/"
           className={back.a}
@@ -20,20 +21,25 @@ const Back= (props:Props) => {
           </IconButton>
         </Link>
       </div>
-      <h2 className={back.h2}>menu</h2>
-      <ul  className={back.ul}>
-        {props.id.map((item,index)=>(
-          <li key={index} className={back.li}>
-            <Link 
-              href={item.id}
-              className={back.a1}
-            >
-              {item.title}
-            </Link>
-          </li>
-        ))}
-       </ul>
-    </div>
+      <div className={container.box}>
+        <h2 className={back.h2}>menu</h2>
+        <ul className="border rounded w-75 m-auto p-0 border-dark">
+          {props.id.map((item,index)=>(
+            <li key={index} className={back.li}>
+              <Link 
+                href={item.id}
+                style={{textDecoration:"none"}}
+              >
+                <Button variant="text">
+                  {item.title}
+                </Button>
+                
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
 

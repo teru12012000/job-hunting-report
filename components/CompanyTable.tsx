@@ -7,11 +7,12 @@ type Props={
   title:string;
   list:ques[];
   link:boolean;
+  id:string;
 }
-const CompanyTable:FC<Props> = ({title,list,link}) => {
+const CompanyTable:FC<Props> = ({title,list,link,id}) => {
   return (
     <>
-      <h2 id="overview">{title}</h2>
+      <h2 id={id}>{title}</h2>
           <TableContainer component={Paper} sx={{margin:"20px auto",width:"80%"}}>
             <Table aria-label="company">
               <TableBody>

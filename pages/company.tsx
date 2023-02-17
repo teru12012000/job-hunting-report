@@ -12,6 +12,7 @@ type tabledeta={
   list:ques[];
   title:string;
   link:boolean;
+  id:string;
 }
 const Company : NextPage= () => {
   const tablelist:tabledeta[]=[
@@ -19,10 +20,12 @@ const Company : NextPage= () => {
       list:comp_ques,
       title:"概要",
       link:true,
+      id:"overview"
     },{
       list:my_reason,
       title:"なぜその会社？",
       link:false,
+      id:"reason"
     }
   ]
   return (
@@ -41,11 +44,10 @@ const Company : NextPage= () => {
               list={item.list}
               title={item.title}
               link={item.link}
+              id={item.id}
             />
           </div>
         ))}
-      
-
       </div>
     </div>
   );
