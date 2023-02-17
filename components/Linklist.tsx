@@ -23,7 +23,6 @@ const Linklist:FC<Props> = ({linkmenu,title,display,icon,display2}) => {
               <Link 
                 href={item.link} 
                 key={index} 
-                className={home.link} 
                 target={item.target}
               >
                 {icon?(
