@@ -10,6 +10,11 @@ export const myintro:intro[]=[
     target:"_blank"
   },
   {
+    link:"/Chronology",
+    name:"私の就活の流れ",
+    target:"",
+  },
+  {
     link:"/company",
     name:"入社予定の会社",
     target:"",

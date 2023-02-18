@@ -13,7 +13,7 @@ const others:NextPage= () => {
         <meta name="description" content="就活におけるその他のことを記載してます。" />
       </Head>
       <Header/>
-      <Back id={othresid}/>
+      <Back id={othresid} />
       <div className={Others.content}>
         <div className={Others.box}>
           <h2 id="start">就活を始めた時期</h2>

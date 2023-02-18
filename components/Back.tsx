@@ -5,7 +5,7 @@ import type {id} from "../data/id";
 import { Button, IconButton } from "@mui/material";
 import container from "../styles/Container.css";
 type Props={
-  id:id[];
+  id:id[]|undefined;
 }
 
 const Back= (props:Props) => {
@@ -21,7 +21,8 @@ const Back= (props:Props) => {
           </IconButton>
         </Link>
       </div>
-      <div className={container.box}>
+      {props.id?(
+        <div className={container.box}>
         <h2 className={back.h2}>menu</h2>
         <ul className="border rounded w-75 m-auto p-0 border-dark">
           {props.id.map((item,index)=>(
@@ -39,6 +40,7 @@ const Back= (props:Props) => {
           ))}
         </ul>
       </div>
+      ):null}
     </>
   );
 }
