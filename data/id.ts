@@ -5,6 +5,10 @@ export type id={
 //面接のページの目次
 export const interviewid:id[]=[
   {
+    id:"/interview/#before",
+    title:"質問事項に入る前に"
+  },
+  {
     id:"/interview/#intro",
     title:"自己紹介",
   },

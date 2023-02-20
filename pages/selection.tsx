@@ -1,12 +1,10 @@
 import { NextPage } from "next";
-import select from "../styles/selection.css";
 import Header from "../components/Header";
 import Back from "../components/Back";
 import Head from "next/head";
 import container from "../styles/Container.css";
 import Link from "next/link";
 import { Button } from "@mui/material";
-import { useState } from "react";
 import MenuCard from "../components/MenuCard";
 import { myid } from "../data/id";
 import {discass_point, important, important_list} from "../data/SelectData";

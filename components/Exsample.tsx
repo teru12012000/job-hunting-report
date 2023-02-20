@@ -36,7 +36,7 @@ const Exsample: FC<Props> = ({text}) => {
               display:dis[text.index],
             }}
           >
-          {text.text}
+          <p className="w-75 m-auto">{text.text}</p>
           </div>
           <p>※例文をクリック!</p>
     </>
