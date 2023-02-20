@@ -99,3 +99,19 @@ export const othresid:id[]=[
     title:"最後に",
   },
 ]
+
+export const myid:id[]=[
+  {
+    id:"/selection/#explanation",
+    title:"企業説明会",
+  },
+  {
+    id:"/selection/#test",
+    title:"webテスト",
+
+  },
+  {
+    id:"/selection/#discuss",
+    title:"グループディスカッション",
+  },
+]

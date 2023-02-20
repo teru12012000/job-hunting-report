@@ -6,7 +6,7 @@ const company={
   }),
   box:style({
     border:"2px solid gray",
-    width:"400px",
+    width:"75%",
     margin:"30px auto",
     fontSize:"20px",
     textAlign:"center",

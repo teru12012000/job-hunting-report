@@ -8,7 +8,7 @@ const container={
     fontSize:20,
     '@media':{
       'screen and (max-width:450px)':{
-        width:"100%",
+        width:"90%",
         fontSize:15
       }
     }
