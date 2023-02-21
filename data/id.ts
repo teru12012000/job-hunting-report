@@ -86,10 +86,6 @@ export const companyid:id[]=[
 //その他の目次
 export const othresid:id[]=[
   {
-    id:"/others/#start",
-    title:"就活を始めた時期",
-  },
-  {
     id:"/others/#agent",
     title:"就活エージェント",
 
