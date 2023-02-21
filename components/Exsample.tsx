@@ -5,38 +5,17 @@ type Props={
   text:text;
 }
 const Exsample: FC<Props> = ({text}) => {
-  const [dis,setDis]= useState([
-    'none',
-    'none',
-    'none',
-    'none',
-    'none',
-  ]);
-  const handleh3=(disp:string,num:number)=>{
-    if(disp==='none'){
-      setDis(
-        dis.map((item,index)=>(
-          index===num? 'block':item
-        ))
-      )
-    }else{
-      setDis(
-        dis.map((item,index)=>(
-          index===num? 'none':item
-        ))
-      )
-    }
+  const [dis,setDis]= useState<boolean>(false);
+  const handleh3=()=>{
+    setDis(!dis);
   }
   return (
     <>
-        <h3 className={int_sty.h3} onClick={()=>handleh3(dis[text.index],text.index)}>例文</h3>
+        <h3 className={int_sty.h3} onClick={()=>handleh3()}>例文</h3>
           <div 
             className={int_sty.point}
-            style={{
-              display:dis[text.index],
-            }}
           >
-          <p className="w-75 m-auto">{text.text}</p>
+            {dis?(<p className="w-75 m-auto">{text.text}</p>):null}
           </div>
           <p>※例文をクリック!</p>
     </>
