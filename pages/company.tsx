@@ -1,12 +1,9 @@
 import { NextPage } from "next";
-import company from "../styles/Company.css"
-import Link from "next/link"
 import Back from "../components/Back"
 import Head from "next/head"
 import Header from "../components/Header"
 import { companyid } from "../data/id";
 import { comp_ques, my_reason, ques } from "../data/companyOverview";
-import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
 import CompanyTable from "../components/CompanyTable";
 type tabledeta={
   list:ques[];

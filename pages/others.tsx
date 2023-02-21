@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 import Back from "../components/Back";
-import Others from "../styles/others.css";
 import Link from "next/link";
 import { othresid } from "../data/id";
 import container from "../styles/Container.css";

@@ -1,9 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
-import home from '../styles/Home.css'
-import Link from 'next/link';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { intro, menu, myintro } from '../data/home'
 import { SNSlink } from '../data/linkdata';
 import Linklist from '../components/Linklist';
