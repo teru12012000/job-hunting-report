@@ -14,11 +14,6 @@ export const myintro:intro[]=[
     name:"私の就活の流れ",
     target:"",
   },
-  {
-    link:"/company",
-    name:"入社予定の会社",
-    target:"",
-  }
 ]
 export const menu:intro[]=[
  {
